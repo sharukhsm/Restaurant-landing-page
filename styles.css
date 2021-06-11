@@ -1,83 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100%;
+}
+
 body {
-  background-color: #f7f7f7;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    280deg,
+    rgba(255, 255, 255, 1) 29%,
+    rgba(237, 237, 237, 1) 92%
+  );
 }
 
-/* The sidebar menu */
-.sidenav {
-  height: 100%;
-  width: 190px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
+.side-bar {
+  display: none;
 }
 
-/* The navigation menu links */
-.sidenav a {
-  margin-left: 10px;
-  padding: 20px 45px;
-  text-decoration: none;
-  font-size: 18px;
-  color: #818181;
-  font-family: "Roboto", sans-serif;
-  display: block;
+.top-bar {
+  height: 100px;
+  width: 100%;
+  /* background-color: green; */
 }
-
-.sidenav h2 {
-  margin-left: 50px;
-  margin-top: 50px;
-  font-size: 40px;
-}
-
-/*About strikethrough*/
-#strike-through {
-  text-decoration: line-through;
-  text-decoration-color: red;
-  text-decoration-thickness: 2px;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: black;
-}
-
-/*Cart button */
-.sidenav .btn {
-  background-color: #f34d4e;
-  border: none;
-  border-radius: 35px;
-  color: white;
-  padding: 15px 50px 15px 50px;
+.top-bar h1 {
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 50px 60px;
+  position: relative;
 }
 
-.bottom-container {
-  /* position: absolute; */
-  margin-top: 100px;
-  margin-left: 300px;
-  line-height: 50px;
+.fa-bars {
+  /* margin: 6px 0; */
+  color: #f34d4e;
+  position: relative;
+  top: 34px;
+  left: 25px;
+}
+.hamburger-icon {
+  position: relative;
 }
 
-.box {
-  border-radius: 20px;
-  border: none;
-  outline: none;
-  display: inline-block;
-  width: 170px;
-  height: 220px;
-  margin: 10px;
-  text-align: center;
-  background: #fff;
-  font-family: "Hammersmith One", sans-serif;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+.fa-shopping-cart {
+  color: #f34d4e;
+
+  position: absolute;
+  right: 25px;
+  top: 33px;
 }
 
+.heading-div {
+  width: 100%;
+}
+
+.heading-div h1 {
+  padding: 30px 30px 20px;
+  font-size: 30px;
+  line-height: 40px;
+  position: absolute;
+  top: 80px;
+  left: 15px;
+}
+
+/* --------------Food section start------------- */
+
+/* food button with image positioning */
+.b1 {
+  position: absolute;
+  top: 210px;
+  left: 35px;
+}
+.b2 {
+  position: absolute;
+  top: 210px;
+  left: 210px;
+}
+
+.b3 {
+  position: absolute;
+  top: 450px;
+  left: 35px;
+}
+
+.b4 {
+  position: absolute;
+  top: 450px;
+  left: 210px;
+}
+
+/* image inside button */
 img {
   width: 120px;
   height: 120px;
@@ -85,74 +96,196 @@ img {
   border: 4px;
 }
 
-.top-row {
-  width: 50%;
-  margin: 100px 0 100px 300px;
-  text-align: left;
-}
-
-/* h1 tag styling */
-.top-row h1 {
-  font-size: 60px;
-}
-
-/* paragraph tag styling */
-.top-row p {
-  font-size: 15px;
-  color: #818181;
+/* Box styling */
+.box {
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  display: inline-block;
+  width: 160px;
+  height: 220px;
+  margin: 10px;
+  text-align: center;
+  background: #ffffff;
   font-family: "Roboto", sans-serif;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.h1-p {
-  width: 50%;
-  float: left;
-  margin-right: 30px;
-  margin-top: -10px;
+.box h3 {
+  position: relative;
+  top: 15px;
+  font-size: 15px;
 }
 
-/* hr tag styling */
-hr {
+/* --------------Food section end------------- */
+
+.paragraph-div {
+  position: absolute;
+  top: 680px;
+  left: 10px;
+}
+
+.paragraph-div p {
+  padding: 30px 30px 20px;
+  font-family: Arial;
+  font-size: 20px;
+  color: #686b78;
+  /* line-height: 10px; */
+}
+
+.paragraph-div hr {
   background-color: red;
   height: 3px;
-  width: 7%;
+  width: 20%;
   border: 0;
-  margin-right: 550px;
+  position: absolute;
+  left: 30px;
 }
 
-/* Hide sidebar */
+/* -------------Desktop resize----------*/
+@media only screen and (min-width: 1000px) {
+  .wrapper {
+    width: 1000px;
+  }
 
-/* @media (max-width: 991px) {
-  .sidenav {
-    position: absolute;
-    display: none;
-  }
-} */
-
-@media screen and (max-width: 799px) {
-  .sidenav {
-    display: none;
-  }
-  .main {
-  }
-  .top-row {
-    margin-left: 50px;
+  .heading-div {
     width: 100%;
   }
-  .bottom-container {
-    margin-left: 10px;
-  }
-  .para {
-    position: absolute;
-    margin-left: 30px;
-    margin-top: 1100px;
-  }
-  #lorem {
-    margin-left: 50px;
+
+  body {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      280deg,
+      rgba(255, 255, 255, 1) 29%,
+      rgba(237, 237, 237, 1) 92%
+    );
   }
 
-  /* hr {
+  /* Disable top bar */
+  .top-bar {
+    display: none;
+  }
+  /* The sidebar menu */
+  .side-bar {
+    height: 100%;
+    width: 590px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+  /* The navigation menu links */
+  .side-bar a {
+    margin-left: 10px;
+    padding: 20px 45px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    font-family: "Roboto", sans-serif;
+    display: block;
+  }
+
+  .side-bar h2 {
+    margin-left: 50px;
+    margin-top: 30px;
+    padding-bottom: 50px;
+    font-size: 30px;
+  }
+
+  /*About strikethrough*/
+  #strike-through {
+    text-decoration: line-through;
+    text-decoration-color: red;
+    text-decoration-thickness: 2px;
+  }
+
+  /* When you mouse over the navigation links, change their color */
+  .side-bar a:hover {
+    color: black;
+  }
+
+  /*Cart button */
+  .side-bar .btn {
+    background-color: #f34d4e;
+    border: none;
+    border-radius: 35px;
+    color: white;
+    padding: 15px 50px 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 50px 60px;
+  }
+  .side-bar {
+    display: block;
+  }
+
+  .heading-div h1 {
+    padding: 30px 30px 20px;
+    font-size: 60px;
+    line-height: 80px;
+
     position: absolute;
-    margin-left: 30px;
-    margin-top: 1100px;
-  } */
+    left: 400px;
+    top: 100px;
+  }
+
+  /*food button with image positioning */
+  .b1 {
+    position: absolute;
+    top: 350px;
+    left: 430px;
+  }
+  .b2 {
+    position: absolute;
+    top: 350px;
+    left: 630px;
+  }
+
+  .b3 {
+    position: absolute;
+    top: 350px;
+    left: 830px;
+  }
+
+  .b4 {
+    position: absolute;
+    top: 350px;
+    left: 1030px;
+  }
+  */
+
+  /* image inside button */
+   img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px;
+  }
+
+  .paragraph-div {
+    position: absolute;
+    top: 110px;
+    left: 1000px;
+  }
+
+  .paragraph-div p {
+    padding: 30px 30px 20px;
+    font-family: Arial;
+    font-size: 20px;
+    /* line-height: 10px; */
+  }
+
+  .paragraph-div hr {
+    background-color: red;
+    height: 3px;
+    width: 20%;
+    border: 0;
+    position: absolute;
+    left: 30px;
+  }
 }
