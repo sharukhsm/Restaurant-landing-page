@@ -1,0 +1,158 @@
+body {
+  background-color: #f7f7f7;
+}
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%;
+  width: 190px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  margin-left: 10px;
+  padding: 20px 45px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  font-family: "Roboto", sans-serif;
+  display: block;
+}
+
+.sidenav h2 {
+  margin-left: 50px;
+  margin-top: 50px;
+  font-size: 40px;
+}
+
+/*About strikethrough*/
+#strike-through {
+  text-decoration: line-through;
+  text-decoration-color: red;
+  text-decoration-thickness: 2px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: black;
+}
+
+/*Cart button */
+.sidenav .btn {
+  background-color: #f34d4e;
+  border: none;
+  border-radius: 35px;
+  color: white;
+  padding: 15px 50px 15px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 50px 60px;
+}
+
+.bottom-container {
+  /* position: absolute; */
+  margin-top: 100px;
+  margin-left: 300px;
+  line-height: 50px;
+}
+
+.box {
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  display: inline-block;
+  width: 170px;
+  height: 220px;
+  margin: 10px;
+  text-align: center;
+  background: #fff;
+  font-family: "Hammersmith One", sans-serif;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px;
+}
+
+.top-row {
+  width: 50%;
+  margin: 100px 0 100px 300px;
+  text-align: left;
+}
+
+/* h1 tag styling */
+.top-row h1 {
+  font-size: 60px;
+}
+
+/* paragraph tag styling */
+.top-row p {
+  font-size: 15px;
+  color: #818181;
+  font-family: "Roboto", sans-serif;
+}
+
+.h1-p {
+  width: 50%;
+  float: left;
+  margin-right: 30px;
+  margin-top: -10px;
+}
+
+/* hr tag styling */
+hr {
+  background-color: red;
+  height: 3px;
+  width: 7%;
+  border: 0;
+  margin-right: 550px;
+}
+
+/* Hide sidebar */
+
+/* @media (max-width: 991px) {
+  .sidenav {
+    position: absolute;
+    display: none;
+  }
+} */
+
+@media screen and (max-width: 799px) {
+  .sidenav {
+    display: none;
+  }
+  .main {
+  }
+  .top-row {
+    margin-left: 50px;
+    width: 100%;
+  }
+  .bottom-container {
+    margin-left: 10px;
+  }
+  .para {
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 1100px;
+  }
+  #lorem {
+    margin-left: 50px;
+  }
+
+  /* hr {
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 1100px;
+  } */
+}
